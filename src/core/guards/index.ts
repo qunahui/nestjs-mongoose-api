@@ -1,5 +1,3 @@
-import { RolesGuard } from "./roles.guard";
+import { RolesGuard } from './roles.guard'
 
-export {
-  RolesGuard
-}
+export { RolesGuard }
