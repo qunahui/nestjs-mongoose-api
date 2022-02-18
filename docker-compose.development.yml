@@ -1,0 +1,14 @@
+version: '3.7'
+
+services:
+  redis_staging:
+    container_name: nestjs_mongoose_redis_staging
+    image: redis:5
+    networks:
+      - webnet_staging
+    ports:
+      - 6379:6379
+networks:
+  webnet_staging:
+volumes:
+  pgdata_staging:
