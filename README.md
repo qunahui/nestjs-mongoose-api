@@ -6,6 +6,8 @@
 
 $ docker-compose -f docker-compose.development.yml up -d
 
+# create /storage folder in root dir
+
 # watch mode
 
 $ yarn dev
