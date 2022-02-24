@@ -10,5 +10,3 @@ services:
       - 6379:6379
 networks:
   webnet_staging:
-volumes:
-  pgdata_staging:
