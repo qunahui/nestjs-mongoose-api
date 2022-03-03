@@ -26,7 +26,7 @@ export class UsersService {
     return hash
   }
 
-  async signUp(registerDto: RegisterDto): Promise<any> {
+  async register(registerDto: RegisterDto): Promise<any> {
     registerDto.password = await this.hashPassword(registerDto.password)
     const user = new this.userModel(registerDto)
 

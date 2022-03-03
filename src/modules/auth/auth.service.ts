@@ -33,13 +33,13 @@ export class AuthService {
     return null
   }
 
-  async signIn(user: User): Promise<any> {
+  async login(user: User): Promise<any> {
     const token = await this.generateToken(user)
     return { token }
   }
 
-  async signUp(registerDto: RegisterDto): Promise<any> {
-    const newUser = await this.usersService.signUp(registerDto)
+  async register(registerDto: RegisterDto): Promise<any> {
+    const newUser = await this.usersService.register(registerDto)
     const token = await this.generateToken(newUser)
 
     return { user: newUser, token }

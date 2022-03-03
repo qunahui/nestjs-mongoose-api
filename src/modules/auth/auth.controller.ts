@@ -10,16 +10,16 @@ export class AuthController {
   constructor(private authService: AuthService) {}
 
   @Public()
-  @Post('/sign-up')
-  async signUp(@Body(ValidationPipe) registerDto: RegisterDto): Promise<any> {
-    return await this.authService.signUp(registerDto)
+  @Post('/register')
+  async register(@Body(ValidationPipe) registerDto: RegisterDto): Promise<any> {
+    return await this.authService.register(registerDto)
   }
 
   @Public()
   @UseGuards(LocalAuthGuard)
-  @Post('/sign-in')
-  async signIn(@Request() req): Promise<any> {
-    return this.authService.signIn(req.user)
+  @Post('/login')
+  async login(@Request() req): Promise<any> {
+    return this.authService.login(req.user)
   }
 
   @UseGuards(JwtAuthGuard)
