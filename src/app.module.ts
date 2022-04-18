@@ -5,17 +5,17 @@ import { CacheModule } from '@nestjs/common'
 import * as redisStore from 'cache-manager-redis-store'
 import { ServeStaticModule } from '@nestjs/serve-static'
 
-import { AuthModule } from './modules/auth/auth.module'
-import { UsersModule } from './modules/users/users.module'
-import { RolesModule } from './modules/roles/roles.module'
+import { AuthModule } from './auth/auth.module'
+import { UsersModule } from './users/users.module'
+import { RolesModule } from './roles/roles.module'
 import { DatabaseModule } from './database/database.module'
 
 import { AppController } from './app.controller'
 import { AppService } from './app.service'
 
 import { APP_GUARD } from '@nestjs/core'
-import { JwtAuthGuard } from './modules/auth/guards/jwt-auth.guard'
-import { RolesGuard } from './core/guards'
+import { JwtAuthGuard } from './auth/guards/jwt-auth.guard'
+import { RolesGuard } from './guards'
 
 @Module({
   imports: [

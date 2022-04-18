@@ -18,7 +18,7 @@ export class PaginationService {
 
       const totalDocs = await model.count(filter)
 
-      if (response?.set) {
+      if (response.set) {
         response.set(
           'meta',
           JSON.stringify({
